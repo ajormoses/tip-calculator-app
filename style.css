@@ -230,6 +230,12 @@ a {
     font-size: 1rem;
   }
 
+  .bill-form input,
+  .people-form input {
+    font-size: 1.2rem;
+    overflow: hidden;
+  }
+
   .select-tip-btn button,
   .custom-form {
     height: 50px;
@@ -242,10 +248,16 @@ a {
 
   #custom {
     height: 50px;
+    padding: 0.5rem 0.8rem 0.5rem 1.5rem;
   }
 
   #custom::placeholder {
+    font-size: 0.8rem;
+  }
+
+  #custom[type="number"] {
     font-size: 1rem;
+    appearance: textfield !important;
   }
 
   .select-tip-btn {

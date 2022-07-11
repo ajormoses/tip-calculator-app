@@ -101,6 +101,9 @@ window.addEventListener("load", (e) => {
     total_person.textContent = "$0.00";
     billForm_input.value = "";
     peopleForm_input.value = "";
+    custom.value = "";
+    people_error.textContent = "";
+    peopleForm.style.border = "1px solid transparent";
   });
 });
 
