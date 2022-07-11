@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&family=Space+Mono");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  border: none;
+  outline: none;
+}
+
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background: var(--Light-grayish-cyan);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-content-logo {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 2rem;
+}
+
+.container-content {
+  background: var(--White);
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding: 2rem 1.7rem 2rem 1.7rem;
+}
+
+.bill,
+.select-tip,
+.people {
+  padding-bottom: 1.7rem;
+}
+
+.bill h1,
+.select-tip h2,
+.people h1 {
+  font-size: 1.2rem;
+  color: var(--Dark-grayish-cyan);
+  padding-bottom: 0.4rem;
+}
+
+.bill-form,
+.people-form {
+  background: var(--Very-light-grayish-cyan);
+  height: 50px;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.bill-form input,
+.people-form input {
+  background: none;
+  width: 80%;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--Very-dark-cyan);
+}
+
+#bill-input::placeholder,
+#people-input::placeholder {
+  color: var(--Grayish-cyan);
+}
+
+.bill-dollar,
+.people-logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.select-tip-btn {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0.5rem;
+}
+
+.select-tip-btn button,
+.custom-form {
+  height: 60px;
+  margin-bottom: 0.3rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--White);
+  background: var(--Very-dark-cyan);
+}
+
+.select-tip-btn button:hover {
+  background: var(--Strong-cyan);
+}
+
+.custom-form {
+  position: relative;
+  background: var(--Very-light-grayish-cyan);
+  border-radius: 5px;
+  height: 60px;
+}
+
+.custom-form:hover {
+  border: 2px solid var(--Light-grayish-cyan);
+}
+
+#custom {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background: transparent;
+}
+
+#custom::placeholder {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+#custom[type="number"] {
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.err-message {
+  text-align: right;
+}
+
+.tip-total {
+  padding: 2rem 1.7rem 2rem 1.7rem;
+  background: var(--Very-dark-cyan);
+  border-radius: 1rem;
+}
+
+.tip-amount-content,
+.total-person-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.7rem;
+}
+
+.tip-amount h1,
+.total-person h1 {
+  font-size: 1rem;
+  color: var(--White);
+  letter-spacing: 1px;
+}
+
+.tip-amount p,
+.total-person p {
+  font-size: 0.9rem;
+  color: var(--Grayish-cyan);
+}
+
+#tip-amount,
+#total-person {
+  display: flex;
+  direction: rtl;
+  flex: 2;
+  font-size: 1.5rem;
+  color: var(--Strong-cyan);
+  font-weight: 700;
+}
+
+#tip-amount-input,
+#total-person-input {
+  background: none;
+  width: 80%;
+  height: 50px;
+}
+
+#tip-amount-input::placeholder,
+#total-person-input::placeholder {
+  font-size: 1.5rem;
+  color: var(--Strong-cyan);
+  font-weight: 700;
+}
+
+.reset-btn {
+  width: 100%;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 800px;
+    height: 450px;
+    margin: auto;
+    border-radius: 1.5rem;
+    padding: 2.3rem;
+  }
+
+  .bill h1,
+  .select-tip h2,
+  .people h1 {
+    font-size: 1rem;
+  }
+
+  .select-tip-btn button,
+  .custom-form {
+    height: 50px;
+    font-size: 1.1rem;
+  }
+
+  .custom-form {
+    height: 50px;
+  }
+
+  #custom {
+    height: 50px;
+  }
+
+  #custom::placeholder {
+    font-size: 1rem;
+  }
+
+  .select-tip-btn {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 0.5rem;
+  }
+
+  .people {
+    position: relative;
+  }
+
+  .err-message {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .tip-total {
+    height: 380px;
+    padding: 2.5rem;
+  }
+
+  .tip-amount-content {
+    padding-bottom: 2.5rem;
+  }
+
+  .tip-amount h1,
+  .total-person h1 {
+    font-size: 0.9rem;
+  }
+
+  .tip-amount p,
+  .total-person p {
+    font-size: 0.8rem;
+  }
+
+  #tip-amount,
+  #total-person {
+    font-size: 2rem;
+  }
+
+  #tip-amount-input::placeholder,
+  #total-person-input::placeholder {
+    font-size: 2rem;
+  }
+
+  .reset-btn {
+    margin-top: 5.5rem;
+    font-size: 1.2rem;
+    background: hsl(183, 81%, 23%);
+    color: var(--Very-dark-cyan);
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+  }
+
+  .reset-btn:hover {
+    background: var(--Strong-cyan);
+  }
+}
